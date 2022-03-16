@@ -67,6 +67,7 @@ const newsDetail = (props) =>{
 }
 
 export async function getServerSideProps(context) {
+  console.log(context);
   const {query: { id },} = context
   // Fetch data from external API
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
